@@ -1,0 +1,32 @@
+name: Dependencies
+
+on:
+  pull_request:
+    branches: ['master', 'dev']
+    paths:
+      - '**/package.json'
+      - '**/package-lock.json'
+      - '**/pnpm-lock.yaml'
+      - '**/yarn.lock'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
+        with:
+          comment-summary-in-pr: always
+          # fail-on-severity: moderate
+          # deny-licenses: GPL-1.0-or-later, LGPL-2.0-or-later
+          # retry-on-snapshot-warnings: true

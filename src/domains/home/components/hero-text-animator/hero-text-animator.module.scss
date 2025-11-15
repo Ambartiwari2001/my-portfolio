@@ -1,0 +1,39 @@
+.hero-text-animator {
+  &__character {
+    position: relative;
+    display: inline-block;
+
+    
+    &:last-child {
+      color: transparent;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      font-weight: bold;
+      position: absolute;
+      color: var(--foreground);
+      content: attr(data-text);
+      transform: translateY(-110%);
+      transition: transform 0.2s ease;
+    }
+
+    &[data-text='a']::before {
+      transform: translate(-30px, -110%);
+    }
+
+    &[data-text='T']::before {
+      transform: translate(-5px, -110%);
+    }
+    &[data-text='i']::before {
+      transform: translate(-10px, -110%);
+    }
+    &[data-text='w']::before {
+      transform: translate(-52px, -110%);
+    }
+    &[data-text='r']::before {
+      transform: translate(-25px, -110%);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    // "baseUrl": ".",
+    "strict": true,
+    "noEmit": true,
+    "allowJs": true,
+    "target": "ES2015",
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "incremental": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "bundler",
+    "lib": ["dom", "esnext", "dom.iterable"],
+    "types": ["node"],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+, "src/app/api/route.js"  ],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,61 @@
+name: ESLint Check
+
+on:
+  push:
+    branches: ["master", "dev"]
+  workflow_dispatch:
+
+concurrency:
+  group: eslint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  eslint:
+    name: Run ESLint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Setup pnpm
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run ESLint (produce SARIF)
+        env:
+          SARIF_ESLINT_IGNORE_SUPPRESSED: "true"
+        run: |
+          pnpm exec eslint . \
+            --ext .js,.jsx,.ts,.tsx \
+            --cache --cache-location .eslintcache \
+            --format @microsoft/eslint-formatter-sarif \
+            --output-file eslint-results.sarif || true
+
+      - name: Upload ESLint SARIF to GitHub
+        if: always()
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: eslint-results.sarif
+          wait-for-processing: true
+
+      - name: Fail build on warnings (PR only)
+        if: github.event_name == 'pull_request'
+        run: |
+          pnpm exec eslint . \
+            --ext .js,.jsx,.ts,.tsx \
+            --max-warnings=0
