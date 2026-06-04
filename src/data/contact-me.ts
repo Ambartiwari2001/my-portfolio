@@ -9,33 +9,38 @@ So, feel free to reach out for freelance projects, job opportunities, or even ju
 Let’s build something awesome together 🚀`,
   contacts: [
     {
-      type: "Email",
-      value: "ambartiwariji1995@gmail.com",
-      link: "mailto:ambartiwariji1995@gmail.com",
+      type: 'Email',
+      value: 'ambartiwariji1995@gmail.com',
+      link: 'mailto:ambartiwariji1995@gmail.com'
     },
     {
-      type: "LinkedIn",
-      value: "linkedin.com/in/ambar-tiwari-098b34227/",
-      link: "https://www.linkedin.com/in/ambar-tiwari-098b34227/",
+      type: 'Phone',
+      value: '+91 7898233354',
+      link: 'tel:+917898233354'
     },
     {
-      type: "GitHub",
-      value: "github.com/Ambartiwari2001",
-      link: "https://github.com/Ambartiwari2001",
+      type: 'LinkedIn',
+      value: 'linkedin.com/in/ambar-tiwari-098b34227/',
+      link: 'https://www.linkedin.com/in/ambar-tiwari-098b34227/'
     },
     {
-      type: "Instagram",
-      value: "instagram.com/ambar_tiwari28",
-      link: "https://instagram.com/ambar_tiwari28?igsh=dGRoaXQ2Ym9teTE=",
+      type: 'GitHub',
+      value: 'github.com/Ambartiwari2001',
+      link: 'https://github.com/Ambartiwari2001'
     },
     {
-      type: "YouTube",
-      value: "@AmbarTiwari-r6f",
-      link: "https://www.youtube.com/@AmbarTiwari-r6f",
+      type: 'Instagram',
+      value: 'instagram.com/ambar_tiwari28',
+      link: 'https://instagram.com/ambar_tiwari28?igsh=dGRoaXQ2Ym9teTE='
     },
     {
-      type: "Location",
-      value: "Ahmedabad, India",
+      type: 'YouTube',
+      value: '@AmbarTiwari-r6f',
+      link: 'https://www.youtube.com/@AmbarTiwari-r6f'
     },
-  ],
+    {
+      type: 'Location',
+      value: 'Ahmedabad, India'
+    }
+  ]
 };

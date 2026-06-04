@@ -28,13 +28,7 @@ export function ContentContainer({
         )}
       >
         {title && (
-          <h1
-            className={clsx(
-              'mb-5 text-2xl font-bold',
-              animator({ name: 'fadeIn' }),
-             
-            )}
-          >
+          <h1 className={clsx('mb-5 text-2xl font-bold', animator({ name: 'fadeIn' }))}>
             {title}
           </h1>
         )}

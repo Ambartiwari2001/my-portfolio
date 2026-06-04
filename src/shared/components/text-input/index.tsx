@@ -58,7 +58,7 @@ export function TextInput({
           onChange={onChange}
           autoFocus={autoFocus}
           placeholder={placeholder}
-          className={clsx(INPUT_CLASSES, 'px-4 py-2',  {
+          className={clsx(INPUT_CLASSES, 'px-4 py-2', {
             'border-red-500 ': !!error
           })}
           {...rest}

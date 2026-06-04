@@ -6,7 +6,7 @@ export const ROUTES = {
   ABOUT_ME: '/about-me/',
   CONTACT_ME: '/contact-me/',
   RECOMMENDATIONS: '/recommendations/',
-  POSTS: "/posts/" 
+  POSTS: '/posts/'
 } as const;
 
 export const MENU_ITEM_ROUTES = [

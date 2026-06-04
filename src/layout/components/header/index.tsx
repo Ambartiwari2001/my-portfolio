@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -9,7 +10,6 @@ import { ToggleThemeButton } from '@/shared/components/toggle-theme-button';
 import { GTM_EVENTS, MENU_ITEM_ROUTES, ROUTES } from '@/shared/constants';
 import { animator, pageTitleGenerator } from '@/shared/helpers';
 import { BurgerMenu } from '@/layout/components/burger-menu';
-import { textFont } from '@/app/fonts';
 import { PERSONAL_DATA } from '@/data';
 
 import { sendGTMEvent } from '@next/third-parties/google';
@@ -18,13 +18,28 @@ import styles from './header.module.scss';
 export function Header() {
   const pathname: string = usePathname();
   const pageTitle = pageTitleGenerator(pathname);
+  const isHome = pathname === ROUTES.HOME;
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    if (!isHome) return;
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHome]);
+
+  const showBlur = !isHome || scrolled;
 
   return (
     <header
       className={clsx(
-        'fixed top-0 z-50 flex w-full items-center justify-center pt-5 md:pt-10 lg:pt-16',
+        'fixed top-0 z-50 flex w-full items-center justify-center pt-5 md:pt-10 lg:pt-16 transition-all duration-300',
         {
-          'backdrop-blur-sm': pathname !== ROUTES.HOME
+          'backdrop-blur-sm': showBlur
         }
       )}
     >
@@ -32,15 +47,10 @@ export function Header() {
         <BurgerMenu />
         <div
           className={clsx('hidden flex-col justify-center max-md:flex', {
-            'max-md:hidden': pathname === ROUTES.HOME
+            'max-md:hidden': isHome
           })}
         >
-          <h1
-            className={clsx(
-              'text-2xl font-bold',
-              animator({ name: 'fadeInLeft' })
-            )}
-          >
+          <h1 className={clsx('text-2xl font-bold', animator({ name: 'fadeInLeft' }))}>
             {PERSONAL_DATA.fullName}
           </h1>
           <p className={clsx('text-lg', animator({ name: 'fadeIn', delay: '1s' }))}>

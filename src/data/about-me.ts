@@ -47,63 +47,50 @@ export const ABOUT_ME_DATA: {
   heroURL: string;
   content: AboutMeContentItem[];
 } = {
-  heroURL: '/images/personal-images/my-photo.png',
+  heroURL: '/images/personal-images/Me.png',
   content: [
     {
       type: 'text',
-      data: "Hi, I’m <strong>Ambar Tiwari</strong> — a passionate <strong>Laravel Developer</strong> and <strong>Software Engineer</strong> who believes in creating impactful, efficient, and modern web applications that solve real-world problems."
+      data: 'Hi, I’m <strong>Ambar Tiwari</strong> — a passionate <strong>Laravel Developer</strong> and <strong>Software Engineer</strong> who believes in creating impactful, efficient, and modern web applications that solve real-world problems.'
     },
     {
       type: 'text',
-      data: "I started my journey in the IT world with a strong foundation in <strong>Java</strong> and <strong>Spring Boot</strong> during my internship, where I learned backend logic, API design, and enterprise-level development patterns. Over time, I shifted my focus toward <strong>PHP (Laravel)</strong> and <strong>Next.js</strong> to build scalable and visually appealing full-stack web applications."
+      data: 'I started my professional journey with a <strong>Java Developer Internship</strong> at Signimus Technologies, where I built backend modules using <strong>JDBC</strong> and <strong>MySQL</strong>, and designed REST APIs following the <strong>MVC architecture</strong>. This provided me with a strong foundation in OOP principles, SQL optimization, and clean backend logic. Later, I expanded my expertise to <strong>PHP (Laravel)</strong>, <strong>WebSockets</strong>, and <strong>React/Next.js</strong> to build fully responsive, real-time, and scalable full-stack applications.'
     },
     {
       type: 'list',
       title: 'My current technical expertise includes:',
       data: [
-        '<strong>Backend:</strong> PHP (Laravel), Java (Spring Boot), Node.js',
-        '<strong>Frontend:</strong> HTML, CSS, JavaScript, React, Next.js, Bootstrap',
-        '<strong>Database:</strong> MySQL, MongoDB',
-        '<strong>Dev Tools:</strong> Git, GitHub, XAMPP, VS Code, Postman',
-        '<strong>Concepts:</strong> REST APIs, MVC Architecture, Authentication, Middleware, and AI Integration Basics'
+        '<strong>Languages & Frameworks:</strong> PHP, Laravel, Java, Python, Node.js, Express, React.js, Next.js',
+        '<strong>Backend & Database:</strong> MySQL, MongoDB, REST APIs, JWT Auth, jQuery, SQL',
+        '<strong>Real-time & Async:</strong> WebSocket, Laravel Reverb, Redis/Caching, Queues & Jobs, Push Notifications',
+        '<strong>Integrations & Storage:</strong> OpenAI API, Payment Gateways, Email Systems, XML Processing, AWS S3',
+        '<strong>Tools & Platforms:</strong> Git, GitHub, Postman, VS Code, XAMPP, Laragon, Linux'
       ]
     },
     {
       type: 'text',
-      data: "Currently, I’m exploring <strong>Artificial Intelligence</strong> and learning how to integrate AI-powered features into web applications. My goal is to become a <strong>Full Stack + AI Developer</strong> who builds intelligent, scalable, and user-centric digital products."
-    },
-    // {
-    //   width: 1200,
-    //   height: 500,
-    //   className: 'w-full rounded',
-    //   type: 'image',
-    //   url: '/images/personal-images/my-photo.png',
-    //   tooltip: 'Ambar Tiwari — Laravel & Java Developer',
-    //   title: 'Ambar Tiwari — Combining backend logic with AI-driven innovation'
-    // },
-    // {
-    //   type: 'component',
-    //   name: ABOUT_ME_COMPONENT_NAMES.recommendations
-    // },
-    {
-      type: 'text',
-      data: "I’ve worked on multiple projects including <strong>Generum</strong> — a smart dress recommendation website built using <strong>PHP, MySQL, and JavaScript</strong>, and a <strong>Camera Booking System</strong> that automates online bookings efficiently. These projects taught me how to handle real-world logic, API integration, and user-friendly design together."
+      data: 'I have earned the <strong>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</strong> credential, reflecting my commitment to designing cloud-based and AI-powered solutions. My goal is to build intelligent, scalable, and user-centric digital products.'
     },
     {
       type: 'text',
-      data: "My professional vision is to build software that’s not just functional but future-ready — combining the robustness of <strong>Laravel</strong> with the flexibility of <strong>Next.js</strong> and the intelligence of <strong>AI</strong>."
+      data: 'During my time at <strong>Amcodr IT Solution</strong>, I architected and delivered complex backend architectures, including a full-stack OLX-style marketplace with 60+ RESTful APIs and real-time chat powered by Laravel Reverb, and an end-to-end real estate admin portal (Sixtiva) integrated with AWS S3. I also built high-throughput XML data pipelines enriched by the OpenAI API using Laravel Queues.'
     },
     {
       type: 'text',
-      data: "When I’m not coding, I love creating motivational and knowledge-based content on <strong>YouTube</strong> and <strong>Instagram</strong>, inspiring others to pursue growth, discipline, and purpose through my ‘<strong>Purusharth</strong>’ series."
+      data: 'Outside of corporate roles, I developed <strong>Generum</strong> — an AI-based clothing recommendation system designed for dynamic product recommendations, showcasing my ability to integrate backend services with interactive frontend logic.'
     },
-    // {
-    //   type: 'component',
-    //   name: ABOUT_ME_COMPONENT_NAMES.competition
-    // },
     {
       type: 'text',
-      data: "I’m always open to collaborations, innovative projects, and learning opportunities. Let’s connect and build something impactful together — the future of software is intelligent, and I want to be a part of shaping it. 🚀"
+      data: 'My professional vision is to build software that’s not just functional but future-ready — combining the robustness of <strong>Laravel</strong> with the flexibility of <strong>Next.js</strong> and the intelligence of <strong>AI</strong>.'
+    },
+    {
+      type: 'text',
+      data: 'When I’m not coding, I love creating motivational and knowledge-based content on <strong>YouTube</strong> and <strong>Instagram</strong>, inspiring others to pursue growth, discipline, and purpose through my ‘<strong>Purusharth</strong>’ series.'
+    },
+    {
+      type: 'text',
+      data: 'I’m always open to collaborations, innovative projects, and learning opportunities. Let’s connect and build something impactful together — the future of software is intelligent, and I want to be a part of shaping it. 🚀'
     }
   ]
 } as const;

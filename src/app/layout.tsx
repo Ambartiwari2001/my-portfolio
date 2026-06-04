@@ -36,9 +36,7 @@ export const metadata: Metadata = {
     default: `${PERSONAL_DATA.fullName} | ${PERSONAL_DATA.title}`
   },
   description: PERSONAL_DATA.pageDescription,
-  keywords: [
-    ...PERSONAL_DATA.englishKeywords
-  ],
+  keywords: [...PERSONAL_DATA.englishKeywords],
   authors: {
     url: PERSONAL_DATA.url,
     name: PERSONAL_DATA.fullName
@@ -91,7 +89,7 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929947588063788"
         ></script>
       </head>
-       <body className={textFont.className}>
+      <body className={textFont.className}>
         <ProgressBar />
 
         <Image

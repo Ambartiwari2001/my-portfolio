@@ -56,11 +56,11 @@ export function AboutMePage() {
     <ContentContainer className="text-center">
       <div className="relative mb-10 flex w-full select-none justify-center">
         <Image
-          width={384}
-          height={480}
+          width={400}
+          height={450}
           loading="lazy"
           className={clsx(
-            'pointer-events-none z-20 w-4/5 max-w-96',
+            'pointer-events-none z-20 w-3/5 max-w-sm object-contain drop-shadow-2xl',
             animator({ name: 'fadeIn', speed: 'slow' })
           )}
           draggable={false}
@@ -79,21 +79,23 @@ export function AboutMePage() {
         sequential
         speed={150}
         parentClassName={clsx(
-          'w-full text-left text-4xl font-extrabold',
-          animator({ name: 'fadeInUp', delay: '1s' }),
-          
+          'w-full text-left text-3xl md:text-4xl font-extrabold',
+          animator({ name: 'fadeInUp', delay: '1s' })
         )}
         text={`About ${PERSONAL_DATA.firstName}`}
       />
       <p
-        className={clsx('mt-1 text-left text-xl', animator({ name: 'fadeInUp' }))}
+        className={clsx(
+          'mt-1 text-left text-lg md:text-xl',
+          animator({ name: 'fadeInUp' })
+        )}
         style={{ animationDelay: '1.3s' }}
       >
         {`${PERSONAL_DATA.fullName} | ${PERSONAL_DATA.title}`}
       </p>
       <div
         className={clsx(
-          'mb-5 mt-4 flex flex-col gap-4 text-left text-lg',
+          'mb-5 mt-4 flex flex-col gap-4 text-left text-base md:text-lg',
           animator({ name: 'fadeIn' }),
           styles['about-me']
         )}

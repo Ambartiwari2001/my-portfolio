@@ -8,10 +8,10 @@ import {
   type RecommendationItem
 } from '@/data';
 import { ContentContainer } from '@/layout/components/content-container';
-import { animator } from '@/shared/helpers';
 // import { titleFont } from '@/app/fonts';
 
 import { RecommendationCard } from './components/recommendation-card';
+import { animator } from '@/shared/helpers';
 
 export const metadata: Metadata = {
   title: 'Recommendations'
@@ -23,14 +23,13 @@ export function RecommendationsPage() {
       <h1
         className={clsx(
           'select-none text-center text-2xl font-bold',
-          
+
           animator({ name: 'fadeInUp' })
         )}
         dangerouslySetInnerHTML={{ __html: RECOMMENDATION_PAGE_DATA.title }}
       />
       <p
         className={clsx(
-          
           'mt-4 select-none text-center text-lg',
           animator({ name: 'fadeIn', delay: '1s' })
         )}

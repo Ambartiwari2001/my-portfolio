@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   title: 'Journey'
 };
 
-// Reverse the order of items to display them in reverse chronological order
-const JOURNEY_ITEMS = JOURNEY_DATA.items.reverse();
+// Display items in the exact order defined in the data file
+const JOURNEY_ITEMS = [...JOURNEY_DATA.items];
 
 export function JourneyPage() {
   return (

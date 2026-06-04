@@ -4,5 +4,5 @@ export const HETO_TEXT_CHARACTERS = [
   { id: 3, text: 'b', replaceText: 'w' },
   { id: 4, text: 'a', replaceText: 'a' },
   { id: 5, text: 'r', replaceText: 'r' },
-  { id: 6, text: '.', replaceText: 'i' },
+  { id: 6, text: '.', replaceText: 'i' }
 ] as const;

@@ -5,7 +5,7 @@ import { animator } from '@/shared/helpers';
 
 export function HomePage() {
   return (
-    <main className="flex h-dvh w-full select-none flex-col items-center justify-center gap-2 overflow-hidden">
+    <main className="flex min-h-dvh w-full select-none flex-col items-center justify-center gap-2 overflow-y-auto py-24">
       <HeroTextAnimator />
       <Summary />
       <div className={animator({ name: 'fadeIn', delay: '1s' })}>

@@ -44,19 +44,18 @@ export function HeroTextAnimator() {
   }, []);
 
   return (
-    <div className="flex w-full flex-col items-center justify-center">
+    <div className="relative z-0 flex w-full flex-col items-center justify-center">
       <div
         ref={titleRef}
         className={clsx(
-          'invisible mt-25 flex w-11/12 select-none items-center justify-center overflow-hidden text-8xl font-extrabold',
-          
+          'invisible mt-25 flex w-11/12 select-none items-center justify-center overflow-hidden text-6xl md:text-7xl lg:text-8xl font-extrabold gap-3 md:gap-5'
         )}
       >
         {HETO_TEXT_CHARACTERS.map(({ id, text, replaceText }) => (
           <h1
             className={clsx(
               styles['hero-text-animator__character'],
-              text === 'A' && 'ml-8'
+              'uppercase'
             )}
             data-text={replaceText}
             key={id}
@@ -68,7 +67,7 @@ export function HeroTextAnimator() {
       <DecryptedText
         sequential
         speed={80}
-        parentClassName="text-3xl"
+        parentClassName="text-2xl md:text-3xl"
         text={PERSONAL_DATA.title}
       />
     </div>

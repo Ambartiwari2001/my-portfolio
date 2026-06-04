@@ -42,7 +42,7 @@ export function ErrorPage({
 
       <button
         className={clsx(
-          'cursor-pointer border-b px-4 leading-10 duration-300 hover:px-8',
+          'cursor-pointer border-b px-4 leading-10 duration-300 hover:px-8'
         )}
         onClick={() => reset()}
       >

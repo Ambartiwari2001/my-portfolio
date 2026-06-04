@@ -5,14 +5,14 @@ import Link from 'next/link';
 
 import { clsx } from 'clsx';
 
-import { Icons } from '@/shared/components/icons';
-import { JourneyItem } from '@/data/journey';
-import { animator } from '@/shared/helpers';
 // import { titleFont } from '@/app/fonts';
 
 import { sendGTMEvent } from '@next/third-parties/google';
+import { Icons } from '@/shared/components/icons';
 import styles from './journey-card.module.scss';
 import { GTM_EVENTS } from '@/shared/constants';
+import { JourneyItem } from '@/data/journey';
+import { animator } from '@/shared/helpers';
 
 const PixelCanvas = dynamic(() => import('@/shared/components/pixel-canvas'), {
   ssr: false
@@ -20,8 +20,8 @@ const PixelCanvas = dynamic(() => import('@/shared/components/pixel-canvas'), {
 
 const TITLE_CLASSES = clsx(
   styles['journey-card__title'],
-  'text-xl tracking-wide pb-2 border-b border-slate-300/40 mb-3 duration-500',
-  // 
+  'text-lg md:text-xl tracking-wide pb-2 border-b border-slate-300/40 mb-3 duration-500'
+  //
 );
 export function JourneyCard({
   data,
@@ -39,7 +39,7 @@ export function JourneyCard({
     <div
       className={clsx(
         styles['journey-card'],
-        'flex w-full text-lg justify-center gap-4 max-md:flex-col max-md:items-center max-md:gap-6',
+        'flex w-full text-base md:text-lg justify-center gap-4 max-md:flex-col max-md:items-center max-md:gap-6',
         className
       )}
     >
@@ -53,8 +53,7 @@ export function JourneyCard({
           style={{ animationDelay }}
           className={clsx(
             'pointer-events-none absolute text-xl font-extrabold tracking-wide',
-            animator({ name: 'fadeIn' }),
-            
+            animator({ name: 'fadeIn' })
           )}
         >
           {year}

@@ -1,17 +1,14 @@
 'use client';
 
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import Link from 'next/link';
 import { clsx } from 'clsx';
 
 import { ContentContainer } from '@/layout/components/content-container';
 import { sendGTMEvent } from '@next/third-parties/google';
 import { ContactForm } from './components/contact-form';
-import { ENV, GTM_EVENTS } from '@/shared/constants';
+import { GTM_EVENTS } from '@/shared/constants';
 import { animator } from '@/shared/helpers';
 import { CONTACT_ME_DATA } from '@/data';
-
-const GOOGLE_RECAPTCHA_ELEMENT_ID = 'g-recaptcha-container';
 
 export function ContactMePage() {
   return (
@@ -23,10 +20,11 @@ export function ContactMePage() {
             className={animator({ name: 'fadeInUp' })}
             style={{ animationDelay: '0.3s' }}
           >
-            Hey there! I'm <strong>Ambar Tiwari</strong> — a passionate and curious Software Developer from India. 
-            I love crafting clean, efficient, and user-friendly digital experiences using modern technologies. 
-            Whether you’re looking to collaborate on a creative idea, need help building a web solution, 
-            or just want to connect and talk about tech — I’d be happy to hear from you! 
+            Hey there! I'm <strong>Ambar Tiwari</strong> — a passionate and curious
+            Software Developer from India. I love crafting clean, efficient, and
+            user-friendly digital experiences using modern technologies. Whether you’re
+            looking to collaborate on a creative idea, need help building a web solution,
+            or just want to connect and talk about tech — I’d be happy to hear from you!
             Let’s create something impactful together 🚀
           </p>
         </div>

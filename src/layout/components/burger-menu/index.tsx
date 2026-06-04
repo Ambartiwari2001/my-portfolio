@@ -8,13 +8,13 @@ import Link from 'next/link';
 import { clsx } from 'clsx';
 
 import { ToggleThemeButton } from '@/shared/components/toggle-theme-button';
-import { GTM_EVENTS, MENU_ITEM_ROUTES } from '@/shared/constants';
-import { animator } from '@/shared/helpers';
 // import { titleFont } from '@/app/fonts';
 
 import { BurgerMenuToolsAnimation } from './burger-menu-tools-animation';
+import { GTM_EVENTS, MENU_ITEM_ROUTES } from '@/shared/constants';
 import { sendGTMEvent } from '@next/third-parties/google';
 import styles from './burger-menu.module.scss';
+import { animator } from '@/shared/helpers';
 
 const MENU_OUT_ANIMATION_CLASSES: string[] = animator({
   name: 'fadeOutUp',

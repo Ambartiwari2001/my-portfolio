@@ -5,9 +5,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { useState } from 'react';
 import { clsx } from 'clsx';
 
-import { sendGTMEvent } from '@next/third-parties/google';
-
-import { EMAIL_VALIDATION_REGEX, GTM_EVENTS } from '@/shared/constants';
+import { EMAIL_VALIDATION_REGEX } from '@/shared/constants';
 import { TextInput } from '@/shared/components/text-input';
 import { Button } from '@/shared/components/button';
 import { animator, notify } from '@/shared/helpers';
@@ -40,32 +38,31 @@ export function ContactForm() {
     }
   });
 
-const [submitting, setSubmitting] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-const onSubmit = async () => {
-  if (submitting) return; // prevent multiple triggers
-  setSubmitting(true);
-  setLoading(true);
+  const onSubmit = async () => {
+    if (submitting) return; // prevent multiple triggers
+    setSubmitting(true);
+    setLoading(true);
 
-  try {
-    const values = getValues(); // get form values
-    const emailResponse = await sendEmail(values);
+    try {
+      const values = getValues(); // get form values
+      const emailResponse = await sendEmail(values);
 
-    // Toast only once
-    if (emailResponse) {
-      // notify.success({ message: 'Your message has been sent successfully!' });
-      reset();
-    } else {
+      // Toast only once
+      if (emailResponse) {
+        // notify.success({ message: 'Your message has been sent successfully!' });
+        reset();
+      } else {
+        notify.error({ message: 'Something went wrong while sending your message.' });
+      }
+    } catch {
       notify.error({ message: 'Something went wrong while sending your message.' });
+    } finally {
+      setLoading(false);
+      setSubmitting(false);
     }
-  } catch (error) {
-    notify.error({ message: 'Something went wrong while sending your message.' });
-  } finally {
-    setLoading(false);
-    setSubmitting(false);
-  }
-};
-
+  };
 
   return (
     <form

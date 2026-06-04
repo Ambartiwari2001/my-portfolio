@@ -12,7 +12,7 @@ export const sendEmail = async (data: requestData): Promise<boolean> => {
     const response = await fetch(ENDPOINTS.sendMessage, {
       method: 'POST',
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -29,7 +29,7 @@ export const sendEmail = async (data: requestData): Promise<boolean> => {
       notify.error({ message: 'Failed to send your message. Please try again later.' });
       return false;
     }
-  } catch (error) {
+  } catch {
     notify.error({ message: 'Something went wrong while sending the email.' });
     return false;
   }

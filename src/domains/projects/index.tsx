@@ -19,14 +19,13 @@ export function ProjectsPage() {
       <h1
         className={clsx(
           'select-none text-center text-2xl font-bold',
-         
+
           animator({ name: 'fadeIn' })
         )}
         dangerouslySetInnerHTML={{ __html: PROJECTS_DATA.title }}
       />
       <p
         className={clsx(
-         
           'mt-4 select-none text-center',
           animator({ name: 'fadeIn', delay: '1s' })
         )}

@@ -12,18 +12,19 @@ export interface JourneyItem {
 const JOURNEY_ITEM_DATA: JourneyItem[] = [
   {
     id: 1,
-    year: 2022,
-    location: 'AKS University, Satna, Madhya Pradesh, India',
-    date: 'Sep 2022 - Sep 2024',
-    title: 'Master of Computer Applications (MCA)',
+    year: 2024,
+    location: 'Ahmedabad, Gujarat, India',
+    date: 'Apr 2024 - Present',
+    title: 'Laravel Developer - Amcodr IT Solutions Pvt. Ltd.',
+    url: 'https://www.linkedin.com/company/amcodr-it-solutions-pvt-ltd/posts/?feedView=all',
     description:
-      '<p>Completed <strong>MCA in Computer Science</strong>, focusing on advanced software development, algorithms, database management, and web technologies.</p>',
+      '<p>Working as a Laravel Developer, architecting and delivering scalable full-stack web applications, real-time messaging, and high-performance data processing systems.</p>',
     items: [
-      'Learned PHP, Laravel, Java, React, JavaScript, jQuery, and MySQL.',
-      'Developed mini-projects and assignments to implement real-world applications.',
-      'Gained practical knowledge in OOP, MVC architecture, RESTful APIs, and database optimization.',
-      'Studied data structures and algorithms to write efficient and reusable code.',
-      'Collaborated on group projects to enhance teamwork and project management skills.'
+      'Architected and delivered a full-stack OLX-style marketplace with 60+ RESTful APIs, wallet system, listing plans, and Sanctum authentication.',
+      'Built a real-time chat system using WebSocket & Laravel Reverb supporting text, image, and file sharing with zero-refresh UX.',
+      'Engineered push notifications via FCM tokens and real-time alerts using Laravel Events, Observers, and Queues.',
+      'Developed a complete real estate platform (Sixtiva) with AWS S3 media storage, role-based access control (Spatie), and enquiry tracking.',
+      'Designed a high-throughput XML data pipeline enriched by the OpenAI API using Laravel Queues & Jobs to process lakhs of records asynchronously.'
     ]
   },
   {
@@ -31,87 +32,48 @@ const JOURNEY_ITEM_DATA: JourneyItem[] = [
     year: 2024,
     location: 'Indore, Madhya Pradesh, India',
     date: 'Jan 2024 - Apr 2024',
-    title: 'Java Developer Intern - Signimus Technologies',
+    title: 'Java Developer Intern - Signimus Technologies Pvt. Ltd',
     url: 'https://www.linkedin.com/company/signi-mus/posts/?feedView=all',
     description:
-      '<p>Completed a 4-month Java Development internship, gaining hands-on experience in building, testing, and deploying Java-based applications.</p>',
+      '<p>Completed a Java development internship, building backend modules and gaining professional experience in software architecture and database design.</p>',
     items: [
-      'Worked on real-time projects, implementing OOP concepts, data structures, and algorithms.',
-      'Developed backend logic and REST APIs for internal tools.',
-      'Collaborated with team members using Git for version control and Agile methodologies.',
-      'Improved debugging, code optimization, and problem-solving skills.'
+      'Developed Java-based backend modules using JDBC & MySQL for a Library Management System.',
+      'Designed and implemented REST APIs with basic authentication following the MVC architecture pattern.',
+      'Gained hands-on experience with Java OOP principles, SQL query optimization, and structured backend development.'
     ]
   },
   {
     id: 3,
-    year: 2024,
-    location: 'Hyderabad, Telangana, India',
-    date: 'Apr 2024 - Apr 2025',
-    title: 'Flight Simulator Engineer - Idyllic Futuristic Technologies LLP',
-    url: 'https://www.linkedin.com/company/idyllic-futuristic-technologies/posts/?feedView=all',
+    year: 2022,
+    location: 'AKS University, Satna, Madhya Pradesh, India',
+    date: 'Aug 2022 - May 2024',
+    title: 'Master of Computer Application (MCA)',
     description:
-      '<p>Worked as a Flight Simulator Engineer, operating and maintaining flight simulation systems for the Indian Air Force, while gaining experience in software integration and troubleshooting.</p>',
+      '<p>Completed MCA with a strong focus on software engineering, database systems, web technologies, and real-world application development.</p>',
     items: [
-      'Monitored and ensured high accuracy of simulation software.',
-      'Collaborated with teams to test, maintain, and enhance simulator applications.',
-      'Worked with Linux systems, SQL databases, and real-time software environments.',
-      'Strengthened analytical, technical, and problem-solving skills relevant to IT and software development.'
+      'Graduated with a CGPA of <strong>8.06 / 10.00</strong>.',
+      'Built academic and personal projects that strengthened OOP, MVC architecture, and programming fundamentals.'
     ]
   },
   {
     id: 4,
     year: 2025,
-    location: 'Indore, Madhya Pradesh, India',
-    date: 'Apr 2025 - Aug 2025',
-    title: 'PHP Developer - Young Decade IT Software Solutions',
-    url: 'https://www.linkedin.com/company/young-decade/posts/?feedView=all',
+    location: 'Online / Various Platforms',
+    date: '2024 - 2025',
+    title: 'Professional Certifications',
     description:
-      '<p>Worked as a PHP Developer building scalable, secure, and high-performance web applications using modern technologies.</p>',
+      '<p>Successfully earned multiple professional certifications validating proficiency in cloud computing, artificial intelligence, frontend, and backend development.</p>',
     items: [
-      'Developed RESTful APIs and dynamic frontend interfaces using PHP, Laravel, React, JavaScript, and jQuery.',
-      'Implemented authentication, authorization, and optimized database queries with MySQL.',
-      'Followed MVC architecture and Git version control for collaborative development.',
-      'Contributed to project planning, code reviews, and deployment processes.',
-      'Focused on security, scalability, and improving user experience for web applications.'
-    ]
-  },
-  {
-    id: 5,
-    year: 2025,
-    location: 'Ahmedabad, Gujarat, India',
-    date: 'Aug 2025 - Present',
-    title: 'PHP Developer - AmCodr IT Solutions Pvt. Ltd.',
-    url: 'https://www.linkedin.com/company/amcodr-it-solutions-pvt-ltd/posts/?feedView=all',
-    description:
-      '<p>Currently working as a PHP Developer, contributing to end-to-end development of secure and scalable web solutions.</p>',
-    items: [
-      'Designing and implementing backend systems, REST APIs, and dynamic frontends using PHP, Laravel, React, and MySQL.',
-      'Optimizing application performance, database queries, and frontend responsiveness.',
-      'Collaborating in team environments using Git and Agile methodology.',
-      'Building applications with strong focus on security, maintainability, and client satisfaction.',
-      'Continuously learning and applying modern tools and technologies to improve software quality.'
-    ]
-  },
-  {
-    id: 6,
-    year: 2025,
-    location: 'Online / Certification',
-    date: 'Oct 2025',
-    title: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate',
-    url: 'https://www.linkedin.com/feed/update/urn:li:activity:7385677718270652416/',
-    description:
-      '<p>Earned the Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate certification, enhancing my expertise in AI, Cloud Infrastructure, and Oracle Cloud technologies.</p>',
-    items: [
-      'Learned to design smarter and scalable AI-powered solutions.',
-      'Gained knowledge of Oracle Cloud Infrastructure services.',
-      'Prepared for real-world applications in software engineering and cloud-based development.'
+      '<strong>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</strong> — Oracle',
+      '<strong>React Certification</strong> — HackerRank',
+      '<strong>Java Certification</strong> — Signimus Technologies'
     ]
   }
 ];
 
 export const JOURNEY_DATA = {
-  title: 'My Professional Journey ...',
-  footer: 'Starting from MCA to becoming a skilled PHP Developer and AI enthusiast.',
-  description: 'On a journey towards becoming a <span className="text-2xl font-bold">Software Engineer</span>',
-  items: JOURNEY_ITEM_DATA
+  title: 'My Professional Journey',
+  footer: 'Laravel Developer who builds web applications, solves real-world problems, and creates practical solutions for real-world challenges.',
+  description: 'On a journey toward becoming a <span className="text-2xl font-bold">Laravel Developer & Software Engineer</span>',
+  items: JOURNEY_ITEM_DATA,
 } as const;

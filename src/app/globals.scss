@@ -23,7 +23,6 @@ body {
   min-height: 100dvh;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
@@ -94,10 +93,8 @@ button {
   }
 }
 
-
 body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 200;       /* thin base font */
+  font-weight: 200; /* thin base font */
   color: #f8f6f6;
   line-height: 1.5;
 }
@@ -105,12 +102,12 @@ body {
 /* Placeholders for all inputs and textareas */
 input::placeholder,
 textarea::placeholder {
-  font-family: 'Inter', sans-serif; /* same font as body */
-  font-weight: 300;                  /* thin */
-  font-size: 1rem;                   /* same size as input text */
-  color: #999;                        /* soft gray */
-  opacity: 1;                         /* make sure fully visible */
-  text-align: left;                   /* aligned left */
+  font-family: inherit; /* same font as body */
+  font-weight: 300; /* thin */
+  font-size: 1rem; /* same size as input text */
+  color: #999; /* soft gray */
+  opacity: 1; /* make sure fully visible */
+  text-align: left; /* aligned left */
 }
 
 /* Optional: for dark mode */

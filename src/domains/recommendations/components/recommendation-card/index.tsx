@@ -5,12 +5,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { clsx } from 'clsx';
 
-import type { RecommendationItem } from '@/data';
-import { GTM_EVENTS } from '@/shared/constants';
-import { animator } from '@/shared/helpers';
 // import { titleFont } from '@/app/fonts';
 
 import styles from './recommendation-card.module.scss';
+import type { RecommendationItem } from '@/data';
+import { GTM_EVENTS } from '@/shared/constants';
+import { animator } from '@/shared/helpers';
 
 export function RecommendationCard({
   data,
